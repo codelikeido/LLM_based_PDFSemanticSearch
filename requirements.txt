@@ -1,0 +1,27 @@
+# ── Core web framework ────────────────────────────────────────────────────────
+flask>=3.0.0
+Werkzeug>=3.0.0
+
+# ── PDF extraction ────────────────────────────────────────────────────────────
+pdfplumber>=0.10.0
+pypdf>=4.0.0
+
+# ── Embeddings (HuggingFace) ──────────────────────────────────────────────────
+sentence-transformers>=2.7.0
+# torch is pulled in by sentence-transformers automatically
+
+# ── Vector search ─────────────────────────────────────────────────────────────
+faiss-cpu>=1.8.0       # use faiss-gpu if CUDA is available
+
+# ── Numerics ──────────────────────────────────────────────────────────────────
+numpy>=1.26.0
+
+# ── Production server ─────────────────────────────────────────────────────────
+gunicorn>=22.0.0
+
+# ── Optional: file upload parsing (already bundled with Flask/Werkzeug) ───────
+# python-multipart is only needed if using FastAPI; Flask handles it natively.
+
+# ── Dev / testing ─────────────────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-cov>=5.0.0
